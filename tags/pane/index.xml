@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pane on nightdrops</title>
+    <link>https://nightdrops.com/tags/pane/</link>
+    <description>Recent content in Pane on nightdrops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 03 Jul 2016 01:01:01 +0100</lastBuildDate>
+    
+	<atom:link href="https://nightdrops.com/tags/pane/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Focaccia</title>
+      <link>https://nightdrops.com/focaccia/</link>
+      <pubDate>Sun, 03 Jul 2016 01:01:01 +0100</pubDate>
+      
+      <guid>https://nightdrops.com/focaccia/</guid>
+      <description>Stemperare il lievito con un cucchiaio di zucchero e impastare con un pugno di farina, e un po di acqua o latte (nota: deve essere poco tiepida: sopra i 37&amp;deg; uccide il lievito), fino a formare un panetto, omogeneo e rotondo. Croce sopra e lasciare lievitare per 10 minuti. Questo funziona un po come la madre.
+Impastare il resto della farina con l&amp;rsquo;acqua, un cucchiaio di olio un cucchiaio di sale fino, impastare e aggiungere il panetto madre.</description>
+    </item>
+    
+  </channel>
+</rss>

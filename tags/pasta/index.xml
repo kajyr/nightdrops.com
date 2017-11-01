@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pasta on nightdrops</title>
+    <link>https://nightdrops.com/tags/pasta/</link>
+    <description>Recent content in Pasta on nightdrops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 Jul 2016 01:01:01 +0100</lastBuildDate>
+    
+	<atom:link href="https://nightdrops.com/tags/pasta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spaghetti alla chitarra con pomodorini e olive</title>
+      <link>https://nightdrops.com/spaghetti-alla-chitarra-con-pomodorini-e-olive/</link>
+      <pubDate>Mon, 04 Jul 2016 01:01:01 +0100</pubDate>
+      
+      <guid>https://nightdrops.com/spaghetti-alla-chitarra-con-pomodorini-e-olive/</guid>
+      <description>Questa è una ricetta &amp;lsquo;base&amp;rsquo;, molto modificabile.
+Per quanto riguarda il pomodoro, io uso i pezzettoni, ma si può usare sia la passata che i pomodorini tagliati a pezzetti. Dipende un po&amp;rsquo; dalla consistenza che si vuole dare al sugo.
+ Fare cuocere la pasta. In una padella fare un po di soffritto, e aggiungere il peperoncino. Aggiungere il pomodoro e le olive e lasciare asciugare il sugo. Quando la pasta è al dente, scolarla e farla finire di cuocere nel sugo.</description>
+    </item>
+    
+  </channel>
+</rss>
