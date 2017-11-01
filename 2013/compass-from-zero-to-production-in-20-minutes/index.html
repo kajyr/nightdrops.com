@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Recently we decided it was time to write better css and optimize a little, and we did choose compass and the scss syntax as the tool.
+
+The project i&rsquo;m workin on is organized with a very big css/ folder with a css for every page, a couple css for the common classes and some css files with fixes for certains nations (I&rsquo;m speaking of Russia, China and Japan, where we have different fonts and all the spacing changes); it is also deployed with continuous integration on several test environments and the production cluster.
+
+In the past we did try a conversion to less, but it was unsuccessful, mainly because the less syntax is not compatible with css so we needed to restyle every page (a lot).
+
+We planned a lot on how to introduce the scss files and after several tries we noted that:
+
+    it was unnecessary to rewrite a single line of css: the scss syntax is superset of css
+    we did not need to convert scss file live and cache them - at the beginning we could source control both
+
+Once all the interface developers were the loop and motivated (pretty easy ;-), we decided to migrate in steps, to make the transition easy:
+
+    Copy the css folder to a new &lsquo;sass&rsquo; folder and rename (batch rename) all the files to .scss, commit and celebrate. This is the core action to introduce sass.
+    Modify the continuous integration script to recompile all the css during the build/deploy task: this way we could remove the css file from versioning and avoid unnecessary merges
+    Modify the above script to deploy the generated sprites: we keep them on different servers and we decided it was not a vital step, so we separated from the second.
+
+The big point is that between step 1 and 2 we let several days pass by. This way all the developers could taste the scss sweetness and bring their sub-projects up to speed. We don&rsquo;t like big changes   :-). Beside that, the first step is really the core of setting up scss, and it only takes a few minutes.'>
+
+<meta property='og:title' content='Compass: from zero to production in 20 minutes • nightdrops'>
+<meta property='og:description' content='Recently we decided it was time to write better css and optimize a little, and we did choose compass and the scss syntax as the tool.
+
+The project i&rsquo;m workin on is organized with a very big css/ folder with a css for every page, a couple css for the common classes and some css files with fixes for certains nations (I&rsquo;m speaking of Russia, China and Japan, where we have different fonts and all the spacing changes); it is also deployed with continuous integration on several test environments and the production cluster.
+
+In the past we did try a conversion to less, but it was unsuccessful, mainly because the less syntax is not compatible with css so we needed to restyle every page (a lot).
+
+We planned a lot on how to introduce the scss files and after several tries we noted that:
+
+    it was unnecessary to rewrite a single line of css: the scss syntax is superset of css
+    we did not need to convert scss file live and cache them - at the beginning we could source control both
+
+Once all the interface developers were the loop and motivated (pretty easy ;-), we decided to migrate in steps, to make the transition easy:
+
+    Copy the css folder to a new &lsquo;sass&rsquo; folder and rename (batch rename) all the files to .scss, commit and celebrate. This is the core action to introduce sass.
+    Modify the continuous integration script to recompile all the css during the build/deploy task: this way we could remove the css file from versioning and avoid unnecessary merges
+    Modify the above script to deploy the generated sprites: we keep them on different servers and we decided it was not a vital step, so we separated from the second.
+
+The big point is that between step 1 and 2 we let several days pass by. This way all the developers could taste the scss sweetness and bring their sub-projects up to speed. We don&rsquo;t like big changes   :-). Beside that, the first step is really the core of setting up scss, and it only takes a few minutes.'>
+<meta property='og:url' content='https://nightdrops.com/2013/compass-from-zero-to-production-in-20-minutes/'>
+<meta property='og:site_name' content='nightdrops'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2013-02-02T01:20:25&#43;01:00'/><meta property='article:modified_time' content='2013-02-02T01:20:25&#43;01:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@@kajyr'>
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+  <title>Compass: from zero to production in 20 minutes • nightdrops</title>
+  <link rel='canonical' href='https://nightdrops.com/2013/compass-from-zero-to-production-in-20-minutes/'>
+  
+  
+  <link rel='icon' href='/images/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'>
+</head>
+
+
+<body class='page type-posts'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>nightdrops</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>Compass: from zero to production in 20 minutes</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2013-02-02T01:20:25&#43;01:00'>Feb 02 2013</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  <p>Recently we decided it was time to write better css and optimize a little, and we did choose <a title="compass-style" href="http://compass-style.org/" target="_blank">compass</a> and the scss syntax as the tool.</p>
+
+<p>The project i&rsquo;m workin on is organized with a very big css/ folder with a css for every page, a couple css for the common classes and some css files with fixes for certains nations (I&rsquo;m speaking of Russia, China and Japan, where we have different fonts and all the spacing changes); it is also deployed with continuous integration on several test environments and the production cluster.</p>
+
+<p>In the past we did try a conversion to less, but it was unsuccessful, mainly because the less syntax is not compatible with css so we needed to restyle every page (a lot).</p>
+
+<p>We planned a lot on how to introduce the scss files and after several tries we noted that:
+<ul>
+    <li><span style="line-height: 14px;">it was unnecessary to rewrite a single line of css: the scss syntax is superset of css</span></li>
+    <li>we did not need to convert scss file live and cache them - at the beginning we could source control both</li>
+</ul>
+Once all the interface developers were the loop and motivated (pretty easy ;-), we decided to migrate in steps, to make the transition easy:
+<ol>
+    <li><strong>Copy the css folder to a new &lsquo;sass&rsquo; folder and rename (batch rename) all the files to .scss</strong>, commit and celebrate. This is the core action to introduce sass.</li>
+    <li><strong>Modify the continuous integration script to recompile all the css during the build/deploy task</strong>: this way we could remove the css file from versioning and avoid unnecessary merges</li>
+    <li><strong>Modify the above script to deploy the generated sprites: </strong>we keep them on different servers and we decided it was not a vital step, so we separated from the second.</li>
+</ol>
+The big point is that between step 1 and 2 we let several days pass by. This way all the developers could taste the scss sweetness and bring their sub-projects up to speed. We don&rsquo;t like big changes   :-). Beside that, the first step is really the core of setting up scss, and it only takes a few minutes.</p>
+
+<p>What we gained? Now the situation is pretty much the same ( the code is messy) but we can work a little every day, along the normal maintenance, to sort things out, and there is no need for a &lsquo;stop everyone and make clean&rsquo; task: the business would never have allowed us that.</p>
+
+<p>On the performance side, the minified css globally weight <strong>a third</strong> of the originals. Yo!</p>
+
+<p>&nbsp;</p>
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/2013/ffmpeg-not-found-after-brew-installing/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>ffmpeg not found after brew installing</a>
+    </div><div class='next-entry'>
+      <a href='/2014/about-interviews/'>
+        <span class='screen-reader'>Next post: </span>About interviews<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='https://github.com/kajyr' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/kajyr' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/carlopanzi' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>
+
+       &copy; 2017 kajyr 
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script></body>
+
+</html>
+
