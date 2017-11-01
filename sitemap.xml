@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nightdrops.com/ravioli-cinesi/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nightdrops.com/2017/notes-about-moving-to-a-remove-work-position/</loc>
     <lastmod>2017-03-01T11:41:00+01:00</lastmod>
   </url>
@@ -88,12 +83,6 @@
   </url>
   
   <url>
-    <loc>https://nightdrops.com/tags/antipasti/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nightdrops.com/authors/</loc>
     <priority>0</priority>
   </url>
@@ -106,18 +95,6 @@
   
   <url>
     <loc>https://nightdrops.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nightdrops.com/tags/cina/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nightdrops.com/tags/etnico/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -162,7 +139,7 @@
   
   <url>
     <loc>https://nightdrops.com/ricette/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
+    <lastmod>2017-01-14T02:01:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -174,7 +151,7 @@
   
   <url>
     <loc>https://nightdrops.com/tags/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
+    <lastmod>2011-12-04T01:01:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,7 +163,7 @@
   
   <url>
     <loc>https://nightdrops.com/</loc>
-    <lastmod>2017-10-03T01:01:01+01:00</lastmod>
+    <lastmod>2017-03-01T11:41:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
