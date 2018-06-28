@@ -1,1 +1,0 @@
-# kajyr.github.io
