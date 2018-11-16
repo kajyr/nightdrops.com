@@ -16,9 +16,8 @@
 title: nightdrops
 author: Carlo Panzi
 
-
 twitter_username: kajyr
-github_username:  kajyr
+github_username: kajyr
 instagram_username: kajyr
 linkedin_username: carlopanzi
 
@@ -30,11 +29,10 @@ google_analytics: UA-1163483-1
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-primer
 plugins:
   - jekyll-feed
   - jekyll-gist
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
