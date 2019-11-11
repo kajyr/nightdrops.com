@@ -1,0 +1,14 @@
+{
+  "name": "kajyr.github.io",
+  "version": "5.0.0",
+  "repository": "git@github.com:kajyr/kajyr.github.io.git",
+  "author": "Carlo <carlo.panzi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "m": "marked"
+  },
+  "dependencies": {
+    "marked": "^0.7.0",
+    "sass": "^1.23.3"
+  }
+}
