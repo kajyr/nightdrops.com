@@ -1,7 +1,4 @@
-_site
+dist/
 .sass-cache
 .jekyll-metadata
-# new
 node_modules
-docs/*.html
-docs/*.css

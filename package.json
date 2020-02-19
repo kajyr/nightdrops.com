@@ -15,7 +15,7 @@
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
     "serve": "light-server -c .lightserverrc",
-    "build": "yarn eleventy:build",
+    "build": "yarn eleventy:build && yarn styles:prod",
     "watch": "yarn eleventy:watch"
   },
   "dependencies": {
