@@ -1,5 +1,9 @@
 ---
+layout: base.njk
+title: nightdrops
 ---
+
+# nightdrops
 
 Hi!
 I am Carlo and I have an addiction to the web.

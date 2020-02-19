@@ -1,0 +1,34 @@
+{
+  "name": "kajyr.github.io",
+  "version": "5.0.0",
+  "repository": "git@github.com:kajyr/kajyr.github.io.git",
+  "author": "Carlo <carlo.panzi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianrose/deventy/issues"
+  },
+  "homepage": "https://github.com/ianrose/deventy#readme",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "eleventy:build": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "serve": "light-server -c .lightserverrc",
+    "build": "yarn eleventy:build && yarn styles:prod",
+    "watch": "yarn eleventy:watch"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "sass": "^1.23.3"
+  },
+  "devDependencies": {
+    "light-server": "^2.6.4"
+  }
+}
