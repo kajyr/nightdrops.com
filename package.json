@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "^2.3.28",
     "gatsby-transformer-sharp": "^2.5.14",
     "gatsby-transformer-yaml": "^2.4.11",
+    "lightbox-react": "^0.3.8",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
