@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import SEO from "../atoms/SEO"
 
@@ -8,10 +9,6 @@ const H1 = styled.h1`
   font-weight: 600;
   line-height: 1.25;
   border-bottom: 1px solid #eaecef;
-
-  a {
-    color: $black;
-  }
 `
 const Container = styled.div`
   width: 80%;
@@ -19,11 +16,20 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-export default function Page({ title, children }) {
+const Title = styled.span`
+  margin-left: ${p => (p.hasBack ? "0" : "27px")};
+`
+
+export default function Page({ title, back, children }) {
   return (
     <Container>
       <SEO />
-      {title && <H1>{title}</H1>}
+      {title && (
+        <H1>
+          {back && <Link to={back}>{"< "}</Link>}
+          <Title hasBack={!!back}>{title}</Title>
+        </H1>
+      )}
       {children}
     </Container>
   )
