@@ -1,0 +1,89 @@
+basics:
+  name: "Carlo Panzi"
+  label: "Programmer"
+  image: ""
+  email: "carlo.panzi@gmail.com"
+  phone: "+39 3280208091"
+  url: "https://nightdrops.com"
+  summary: "I'm charmed by any kind of communication, ranging from network programming to human interaction, passionate about games, both board and digital, photography and sports (ice and street skating, ski and scuba diving)."
+  profiles:
+    - network: "twitter"
+      username: "kajyr"
+      url: "https://twitter.com/kajyr"
+    - network: "github"
+      username: "kajyr"
+      url: "https://github.com/kajyr"
+    - network: "linkedIn"
+      username: "carlopanzi"
+      url: "https://www.linkedin.com/in/carlopanzi"
+work:
+  - name: "ÜberResearch GmbH"
+    position: "Senior Software Engineer"
+    startDate: "December 2016"
+    endDate: "present"
+    summary:
+      - "In ÜberResearch my work consist in managing the frontend for the current release and the upcoming release of the main company product."
+    highlights: []
+  - name: "YOOX Net-A-Porter Group"
+    position: "Senior Frontend Developer / Tech lead for in-season multibrand"
+    startDate: "2011"
+    endDate: "December 2016"
+    summary:
+      - "I have lead a development team in charge of the frontend in-season multibrand e-commerce platform. By coordinating the activities with other tech areas and acting as a liaison with all the other departments in the company, I helped the commercial team deliver the best experience to users."
+      - "Through the frontend communities I advocated the use of web standards and agile techniques to improve collaboration and keep high standards in the tech departments."
+    highlights: []
+  - name: "YOOX Net-A-Porter Group"
+    position: "Senior Frontend Developer"
+    startDate: "June 2010"
+    endDate: "2011"
+    summary:
+      - "As a frontend developer for the Mono brand Product Team, I've lead a team of web designers and developers in the release and maintenance of several Online Stores; we worked using the asp classic, .NET, XSLT server-side and javascript, css, flash and flex on the client side."
+      - "Published and maintained the Online Stores for the following brands: Diesel, Moschino, Maison Martin Margiela, Coccinelle, Napapijri"
+    highlights: []
+  - name: "ObjectWay"
+    position: "Flash Developer Consultant"
+    startDate: "Sept. 2009"
+    endDate: "June 2010"
+    summary:
+      - "I've worked as a Flash / Actionscript 3 Developer Consultant for the YOOX Group Monobrand Product Team. While working in a flash specialized team I was in charge for the common libraries to all the flash platform, providing infrastructure to other developers."
+      - "With my team we also released and maintained the following Online Stores: Moschino, Valentino, Napapijri, Roberto Cavalli, Alberta Ferretti"
+    highlights: []
+  - name: "JDT"
+    position: "Web and RIA Developer"
+    startDate: "2008"
+    endDate: "July 2009"
+    summary:
+      - "Released a number of web and desktop applications using Adobe Flash and AIR, php javascript and CSS, using Wordpress and JOOMLA as backend."
+    highlights: []
+  - name: "NextMedia Lab"
+    position: "Web / Game Developer"
+    startDate: "2006"
+    endDate: "2008"
+    summary:
+      - "Developed and managed projects, internal tools and learning games for: Costa Crociere, Unicredit Group, Banca Etruria, Magneti Marelli, Intesa San Paolo, Sanofi - Aventis"
+    highlights: []
+education:
+  - institution: "Università degli Studi di Milano-Bicocca"
+    area: "BSc Computer Science"
+    studyType: "Bachelor"
+    startDate: "2005"
+    endDate: "2009"
+
+skills:
+  - "JavaScript"
+  - "React & react-native"
+  - "node.js"
+  - "CSS & CSS preprocessors"
+  - "HTML"
+  - "Team Management"
+  - "Test Driven Development"
+  - "Continuous Integration"
+  - "Agile Methodologies"
+languages:
+  - language: "English"
+    fluency: "Highly proficient"
+  - language: "Italian"
+    fluency: "Native speaker"
+meta:
+  canonical: "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json"
+  version: "v1.0.0"

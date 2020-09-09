@@ -15,6 +15,15 @@ const GlobalStyle = createGlobalStyle`
     color: ${black};
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 `
 
 export default GlobalStyle

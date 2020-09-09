@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   plugins: [
     // Make sure this plugin is first in the array of plugins
@@ -21,10 +23,24 @@ module.exports = {
         icon: `src/images/icon-144.png`, // This path is relative to the root of the site.
       },
     },
-
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: path.join(__dirname, `content`, `portfolio`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolioImages`,
+        path: path.join(__dirname, `content`, `images`),
+      },
+    },
   ],
   siteMetadata: {
     title: "Carlo Panzi | nightdrops",
