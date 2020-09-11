@@ -66,13 +66,20 @@ const Gallery = ({ images, alt }) => {
 
 export default function PortfolioProject({ data }) {
   const { portfolioYaml } = data
-  const { title, url, images } = portfolioYaml
-
+  const { title, url, images, highlights } = portfolioYaml
+  console.log(highlights)
   return (
     <>
       <GlobalStyle />
       <Page title={title} back="/p">
         <h2>Info</h2>
+        {highlights && (
+          <ul>
+            {highlights.map(hi => (
+              <li key={hi}>{hi}</li>
+            ))}
+          </ul>
+        )}
         {url && (
           <p>
             Available at:{" "}
@@ -91,6 +98,7 @@ export const pageQuery = graphql`
     portfolioYaml(id: { eq: $id }) {
       title
       url
+      highlights
       images {
         id
         childImageSharp {
