@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <GlobalStyle />
       <Page title="nightdrops">
-        Hi! I am Carlo. I am a scuba diver and a{" "}
+        Hi! I am Carlo. I am a <Link to="/d">scuba diver </Link> and a{" "}
         <Link to="/p">fullstack Js developer</Link>.
       </Page>
     </>
