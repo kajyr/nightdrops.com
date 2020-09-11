@@ -22,14 +22,51 @@ const ImageContainer = styled.div`
   }
 `
 
-export default function PortfolioProject({ data }) {
+const Gallery = ({ images, alt }) => {
   const [lightboxOpenIndex, setLbOpenIndex] = useState(null)
-
-  const { portfolioYaml } = data
-  const { title, url, images } = portfolioYaml
+  if (!images) {
+    return null
+  }
 
   const isOpen = lightboxOpenIndex !== null
   const lbImages = images.map(imageNode => imageNode.childImageSharp.fluid.src)
+
+  return (
+    <>
+      <ImageContainer>
+        {images.map((imageNode, index) => (
+          <button key={imageNode.id} onClick={() => setLbOpenIndex(index)}>
+            <Img fluid={imageNode.childImageSharp.fluid} alt={alt} />
+          </button>
+        ))}
+      </ImageContainer>
+      {isOpen && (
+        <Lightbox
+          mainSrc={lbImages[lightboxOpenIndex]}
+          nextSrc={lbImages[(lightboxOpenIndex + 1) % lbImages.length]}
+          prevSrc={
+            lbImages[
+              (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
+            ]
+          }
+          onCloseRequest={() => setLbOpenIndex(null)}
+          onMovePrevRequest={() =>
+            setLbOpenIndex(
+              (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
+            )
+          }
+          onMoveNextRequest={() =>
+            setLbOpenIndex((lightboxOpenIndex + 1) % lbImages.length)
+          }
+        />
+      )}
+    </>
+  )
+}
+
+export default function PortfolioProject({ data }) {
+  const { portfolioYaml } = data
+  const { title, url, images } = portfolioYaml
 
   return (
     <>
@@ -44,35 +81,7 @@ export default function PortfolioProject({ data }) {
             </a>
           </p>
         )}
-        {images && (
-          <ImageContainer>
-            {images.map((imageNode, index) => (
-              <button key={imageNode.id} onClick={() => setLbOpenIndex(index)}>
-                <Img fluid={imageNode.childImageSharp.fluid} alt={title} />
-              </button>
-            ))}
-          </ImageContainer>
-        )}
-        {isOpen && (
-          <Lightbox
-            mainSrc={lbImages[lightboxOpenIndex]}
-            nextSrc={lbImages[(lightboxOpenIndex + 1) % lbImages.length]}
-            prevSrc={
-              lbImages[
-                (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
-              ]
-            }
-            onCloseRequest={() => setLbOpenIndex(null)}
-            onMovePrevRequest={() =>
-              setLbOpenIndex(
-                (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
-              )
-            }
-            onMoveNextRequest={() =>
-              setLbOpenIndex((lightboxOpenIndex + 1) % lbImages.length)
-            }
-          />
-        )}
+        <Gallery images={images} alt={title} />
       </Page>
     </>
   )
