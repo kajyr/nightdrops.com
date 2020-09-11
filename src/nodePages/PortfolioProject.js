@@ -67,7 +67,7 @@ const Gallery = ({ images, alt }) => {
 export default function PortfolioProject({ data }) {
   const { portfolioYaml } = data
   const { title, url, images, highlights } = portfolioYaml
-  console.log(highlights)
+
   return (
     <>
       <GlobalStyle />
