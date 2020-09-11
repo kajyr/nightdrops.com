@@ -5,8 +5,6 @@ import Page from "../templates/Page"
 import GlobalStyle from "../atoms/GlobalStyle"
 import GoogleMapReact from "google-map-react"
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
-
 export default function Dives({ data }) {
   const {
     allDiveNode: { group },
