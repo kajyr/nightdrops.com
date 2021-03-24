@@ -7,16 +7,12 @@ const portfolioProjectTemplate = path.resolve(
 )
 const divesExportFile = `./content/dives/all.xml`
 
-exports.sourceNodes = async ({
-  actions,
-  createNodeId,
-  createContentDigest,
-}) => {
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const { createNode } = actions
 
   // Dives -------------------------------------
   const xml = fs.readFileSync(divesExportFile, "utf-8")
-  const logbook = await importer(xml)
+  const logbook = importer(xml)
 
   logbook.dives.forEach(dive => {
     // Data can come from anywhere, but for now create it manually

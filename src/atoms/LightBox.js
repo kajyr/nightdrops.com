@@ -1,22 +1,41 @@
 import React from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
 import styled from "styled-components"
+import { useOutsideClick } from "@radar-ui/use-outside-click"
 
-const Wrapper = styled.div``
-const NextButton = styled.button`
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
+const Overlay = styled.div`
+  background: rgba(11, 11, 11, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
-const Lightbox = ({ childImageSharp }) => {
+const Wrapper = styled.div`
+  margin: 24px auto;
+  max-width: 70vw;
+  min-width: 50vw;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  position: relative;
+`
+
+const Lightbox = ({ children, onCloseRequest }) => {
+  const ref = useOutsideClick(onCloseRequest)
   return (
-    <Wrapper>
-      <button onClick={}>Prev</button>
-      <Img fluid={childImageSharp.fluid} />
-      <button onClick={}>Next</button>
-    </Wrapper>
+    <Overlay>
+      <Wrapper>
+        <div ref={ref}>{children}</div>
+      </Wrapper>
+    </Overlay>
   )
 }
+
+export default Lightbox

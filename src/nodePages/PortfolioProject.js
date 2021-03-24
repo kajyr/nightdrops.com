@@ -1,13 +1,11 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-
-import Lightbox from "lightbox-react"
-import "lightbox-react/style.css"
 
 import Page from "../templates/Page"
 import GlobalStyle from "../atoms/GlobalStyle"
+import Lightbox from "../atoms/Lightbox"
 
 const ImageContainer = styled.div`
   display: flex;
@@ -27,38 +25,28 @@ const Gallery = ({ images, alt }) => {
   if (!images) {
     return null
   }
-
   const isOpen = lightboxOpenIndex !== null
-  const lbImages = images.map(imageNode => imageNode.childImageSharp.fluid.src)
 
   return (
     <>
       <ImageContainer>
         {images.map((imageNode, index) => (
           <button key={imageNode.id} onClick={() => setLbOpenIndex(index)}>
-            <Img fluid={imageNode.childImageSharp.fluid} alt={alt} />
+            <GatsbyImage image={imageNode.fixed.gatsbyImageData} alt={alt} />
           </button>
         ))}
       </ImageContainer>
       {isOpen && (
         <Lightbox
-          mainSrc={lbImages[lightboxOpenIndex]}
-          nextSrc={lbImages[(lightboxOpenIndex + 1) % lbImages.length]}
-          prevSrc={
-            lbImages[
-              (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
-            ]
-          }
-          onCloseRequest={() => setLbOpenIndex(null)}
-          onMovePrevRequest={() =>
-            setLbOpenIndex(
-              (lightboxOpenIndex + lbImages.length - 1) % lbImages.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setLbOpenIndex((lightboxOpenIndex + 1) % lbImages.length)
-          }
-        />
+          onCloseRequest={() => {
+            setLbOpenIndex(null)
+          }}
+        >
+          <GatsbyImage
+            image={images[lightboxOpenIndex].fluid.gatsbyImageData}
+            alt={alt}
+          />
+        </Lightbox>
       )}
     </>
   )
@@ -101,10 +89,11 @@ export const pageQuery = graphql`
       highlights
       images {
         id
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+        fixed: childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 300)
+        }
+        fluid: childImageSharp {
+          gatsbyImageData(width: 2000)
         }
       }
     }

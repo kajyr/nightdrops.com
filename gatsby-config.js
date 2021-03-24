@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GATSBY_GA_TRACKING_ID,
+        trackingId: process.env.GATSBY_GA_TRACKING_ID || "nooo",
         head: true,
       },
     },
@@ -25,6 +25,7 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-yaml`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
