@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import SEO from "../atoms/SEO"
+import Seo from "../atoms/SEO"
 
 const H1 = styled.h1`
   margin: 0 0 1rem 0;
@@ -23,7 +23,7 @@ const Title = styled.span`
 export default function Page({ title, back, children }) {
   return (
     <Container>
-      <SEO />
+      <Seo />
       {title && (
         <H1>
           {back && <Link to={back}>{"< "}</Link>}
