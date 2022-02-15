@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-import Page from "../templates/Page"
-import GlobalStyle from "../atoms/GlobalStyle"
-import Lightbox from "../atoms/Lightbox"
+import Page from "templates/Page"
+import GlobalStyle from "atoms/GlobalStyle"
+import Lightbox from "atoms/Lightbox"
 
 const ImageContainer = styled.div`
   display: flex;
@@ -82,7 +82,7 @@ export default function PortfolioProject({ data }) {
   )
 }
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     portfolioYaml(id: { eq: $id }) {
       title
       url

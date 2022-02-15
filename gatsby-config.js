@@ -11,6 +11,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
