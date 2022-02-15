@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
-const black = "#24292e"
+const black = "#24292e";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -24,6 +24,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

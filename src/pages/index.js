@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import Page from "../templates/Page"
-import GlobalStyle from "../atoms/GlobalStyle"
+import React from "react";
+import { Link } from "gatsby";
+import Page from "../templates/Page";
+import GlobalStyle from "../atoms/GlobalStyle";
 
 export default function Home() {
   return (
@@ -12,5 +12,5 @@ export default function Home() {
         <Link to="/p">fullstack Js developer</Link>.
       </Page>
     </>
-  )
+  );
 }

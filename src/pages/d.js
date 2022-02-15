@@ -1,16 +1,16 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Page from "../templates/Page"
-import GlobalStyle from "../atoms/GlobalStyle"
-import GoogleMapReact from "google-map-react"
+import Page from "../templates/Page";
+import GlobalStyle from "../atoms/GlobalStyle";
+import GoogleMapReact from "google-map-react";
 
 export default function Dives({ data }) {
   const {
     allDiveNode: { group },
-  } = data
+  } = data;
 
-  const locations = group.map(({ nodes }) => nodes[0].location)
+  const locations = group.map(({ nodes }) => nodes[0].location);
 
   function renderMarkers(map, maps) {
     locations.forEach(loc => {
@@ -18,8 +18,8 @@ export default function Dives({ data }) {
         position: { lng: Number(loc.lng), lat: Number(loc.lat) },
         map,
         title: loc.site,
-      })
-    })
+      });
+    });
   }
 
   return (
@@ -40,7 +40,7 @@ export default function Dives({ data }) {
         </div>
       </Page>
     </>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -59,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

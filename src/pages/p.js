@@ -1,18 +1,18 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import Page from "../templates/Page"
-import GlobalStyle from "../atoms/GlobalStyle"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import styled from "styled-components";
+import Page from "../templates/Page";
+import GlobalStyle from "../atoms/GlobalStyle";
 
-import { linkProject } from "../helpers"
+import { linkProject } from "../helpers";
 
 const Ul = styled.ul`
   margin: 0;
-`
+`;
 export default function Portfolio({ data }) {
   const {
     allPortfolioYaml: { edges },
-  } = data
+  } = data;
   return (
     <>
       <GlobalStyle />
@@ -30,7 +30,7 @@ export default function Portfolio({ data }) {
         </Ul>
       </Page>
     </>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -47,4 +47,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

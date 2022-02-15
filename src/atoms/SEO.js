@@ -1,15 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title }) => {
-  const { site } = useStaticQuery(query)
+  const { site } = useStaticQuery(query);
 
   const seo = {
     title: title || site.siteMetadata.defaultTitle,
     twitterUsername: site.siteMetadata.twitterUsername,
-  }
+  };
 
   return (
     <Helmet title={seo.title}>
@@ -28,19 +28,19 @@ const SEO = ({ title }) => {
         <meta name="twitter:description" content={seo.description} />
       )}
     </Helmet>
-  )
-}
+  );
+};
 
 SEO.propTypes = {
   title: PropTypes.string,
-}
+};
 
 SEO.defaultProps = {
   title: null,
   description: null,
   image: null,
   article: false,
-}
+};
 
 const query = graphql`
   query SEO {
@@ -52,6 +52,6 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
-export default SEO
+export default SEO;

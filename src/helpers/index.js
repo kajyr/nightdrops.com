@@ -1,1 +1,1 @@
-export const linkProject = project => `/p/${project.slug}`
+export const linkProject = project => `/p/${project.slug}`;

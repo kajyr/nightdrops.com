@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { useOutsideClick } from "@radar-ui/use-outside-click"
+import React from "react";
+import styled from "styled-components";
+import { useOutsideClick } from "@radar-ui/use-outside-click";
 
 const Overlay = styled.div`
   background: rgba(11, 11, 11, 0.8);
@@ -15,7 +15,7 @@ const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Wrapper = styled.div`
   margin: 24px auto;
@@ -25,17 +25,17 @@ const Wrapper = styled.div`
   align-items: center;
   pointer-events: none;
   position: relative;
-`
+`;
 
 const Lightbox = ({ children, onCloseRequest }) => {
-  const ref = useOutsideClick(onCloseRequest)
+  const ref = useOutsideClick(onCloseRequest);
   return (
     <Overlay>
       <Wrapper>
         <div ref={ref}>{children}</div>
       </Wrapper>
     </Overlay>
-  )
-}
+  );
+};
 
-export default Lightbox
+export default Lightbox;

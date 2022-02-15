@@ -1,10 +1,11 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import React, { useState } from "react";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
-import Page from "templates/Page"
-import GlobalStyle from "atoms/lightbox"
+import Page from "templates/Page";
+import GlobalStyle from "atoms/GlobalStyle";
+import Lightbox from "atoms/lightbox";
 
 const ImageContainer = styled.div`
   display: flex;
@@ -17,14 +18,14 @@ const ImageContainer = styled.div`
     background: inherit;
     cursor: pointer;
   }
-`
+`;
 
 const Gallery = ({ images, alt }) => {
-  const [lightboxOpenIndex, setLbOpenIndex] = useState(null)
+  const [lightboxOpenIndex, setLbOpenIndex] = useState(null);
   if (!images) {
-    return null
+    return null;
   }
-  const isOpen = lightboxOpenIndex !== null
+  const isOpen = lightboxOpenIndex !== null;
 
   return (
     <>
@@ -38,7 +39,7 @@ const Gallery = ({ images, alt }) => {
       {isOpen && (
         <Lightbox
           onCloseRequest={() => {
-            setLbOpenIndex(null)
+            setLbOpenIndex(null);
           }}
         >
           <GatsbyImage
@@ -48,12 +49,12 @@ const Gallery = ({ images, alt }) => {
         </Lightbox>
       )}
     </>
-  )
-}
+  );
+};
 
 export default function PortfolioProject({ data }) {
-  const { portfolioYaml } = data
-  const { title, url, images, highlights } = portfolioYaml
+  const { portfolioYaml } = data;
+  const { title, url, images, highlights } = portfolioYaml;
 
   return (
     <>
@@ -78,7 +79,7 @@ export default function PortfolioProject({ data }) {
         <Gallery images={images} alt={title} />
       </Page>
     </>
-  )
+  );
 }
 export const pageQuery = graphql`
   query ($id: String!) {
@@ -97,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
