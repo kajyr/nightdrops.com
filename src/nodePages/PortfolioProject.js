@@ -4,8 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import Page from "templates/Page"
-import GlobalStyle from "atoms/GlobalStyle"
-import Lightbox from "atoms/Lightbox"
+import GlobalStyle from "atoms/lightbox"
 
 const ImageContainer = styled.div`
   display: flex;
