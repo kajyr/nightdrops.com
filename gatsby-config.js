@@ -2,14 +2,6 @@ const path = require("path");
 
 module.exports = {
   plugins: [
-    // Make sure this plugin is first in the array of plugins
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GATSBY_GA_TRACKING_ID || "nooo",
-        head: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-root-import`,
     {
