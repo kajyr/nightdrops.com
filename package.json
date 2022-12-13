@@ -9,7 +9,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "dependencies": {
+  "devDependencies": {
     "@radar-ui/use-outside-click": "^0.3.3",
     "babel-plugin-styled-components": "^2.0.2",
     "dive-log-importer": "^4.3.4",
