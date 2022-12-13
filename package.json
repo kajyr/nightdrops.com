@@ -1,8 +1,8 @@
 {
-  "name": "kajyr.github.io",
+  "name": "nightdops.com",
   "private": true,
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

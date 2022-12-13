@@ -27,6 +27,7 @@ const SEO = ({ title }) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
+      <link rel="me" href="https://mastodon.uno/@carlop" />
     </Helmet>
   );
 };
