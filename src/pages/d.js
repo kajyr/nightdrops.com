@@ -46,7 +46,7 @@ export default function Dives({ data }) {
 export const pageQuery = graphql`
   query {
     allDiveNode(filter: { location: { lat: { ne: "" } } }) {
-      group(field: location___site) {
+      group(field: { location: { site: SELECT } }) {
         nodes {
           location {
             lat
