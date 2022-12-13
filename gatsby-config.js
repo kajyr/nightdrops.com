@@ -38,7 +38,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: "Carlo Panzi | nightdrops",
-    url: "https://www.nightdrops.com",
+    url: "https://nightdrops.com",
     twitterUsername: "@kajyr",
   },
 };
