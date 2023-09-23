@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import Seo from "../atoms/SEO";
@@ -16,18 +16,19 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Title = styled.span`
-  margin-left: ${p => (p.hasBack ? "0" : "27px")};
-`;
-
-export default function Page({ title, back, children }) {
+type Props = {
+  title: string;
+  back?: string;
+  children: ReactNode;
+};
+export default function Page({ title, back, children }: Props) {
   return (
     <Container>
       <Seo />
       {title && (
         <H1>
           {back && <Link to={back}>{"< "}</Link>}
-          <Title hasBack={!!back}>{title}</Title>
+          <span style={{ marginLeft: !!back ? "0" : "27px" }}>{title}</span>
         </H1>
       )}
       {children}
