@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+    <title>{{ page_title }}</title>
+    {% if seo_description %}
+    <meta name="description" content="{{seo_description}}" />
+    {% endif %}
+    <link rel="me" href="https://mastodon.uno/@carlop" />
+    <link
+      rel="icon"
+      href="{{ '/images/icon-144.png' | url }}"
+      type="image/png"
+    />
+    {% block header %}{% endblock %}
+  </head>
+  <body>
+    <main class="mx-auto w-4/5 max-w-screen-lg">
+      {% block content %} {{ content | safe }} {% endblock %}
+    </main>
+    {% block footer_scripts %}{% endblock %}
+  </body>
+</html>
