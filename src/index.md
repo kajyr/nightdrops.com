@@ -1,8 +1,8 @@
 ---
-page_title: "Carlo | nightdrops.com"
+page_title: "Carlo Panzi"
 layout: "layouts/home.html"
 ---
 
-# nightdrops
+# Hi! I am Carlo
 
-Hi! I am Carlo. I am a [scuba diver](/scuba) and a [fullstack developer](https://github.com/kajyr).
+I am an [engineering manager](https://www.linkedin.com/in/carlopanzi), a [fullstack developer](https://github.com/kajyr) and in my free time a [scuba diver](/scuba).

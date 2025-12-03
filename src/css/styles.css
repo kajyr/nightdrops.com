@@ -26,5 +26,5 @@ h2 {
 }
 
 a {
-  @apply hover:underline;
+  @apply text-slate-950 underline underline-offset-4 decoration-2 hover:decoration-sky-600;
 }
