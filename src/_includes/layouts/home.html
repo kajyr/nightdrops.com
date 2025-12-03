@@ -1,2 +1,9 @@
-{% extends "layouts/base.html" %} {% block content %} {{ content | safe }}
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    {{ content | safe }}
 {%endblock %}
+
+{% block footer_scripts %}
+    <script src="{{ '/js/more.js' | url }}" defer></script>
+{% endblock %}
