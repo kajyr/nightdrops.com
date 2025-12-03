@@ -7,11 +7,12 @@
     "watch": "eleventy --serve & tailwindcss -i ./src/css/styles.css -o ./public/css/styles.css --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "autoprefixer": "^10.4.16",
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.17",
+    "autoprefixer": "^10.4.22",
     "babel-plugin-styled-components": "^2.1.4",
     "dive-log-importer": "^5.0.0",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.3"
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
   }
 }
