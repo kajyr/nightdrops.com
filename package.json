@@ -11,7 +11,7 @@
     "@tailwindcss/cli": "^4.1.17",
     "autoprefixer": "^10.4.22",
     "babel-plugin-styled-components": "^2.1.4",
-    "dive-log-importer": "^5.0.0",
+    "dive-log-importer": "^5.0.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17"
   }
