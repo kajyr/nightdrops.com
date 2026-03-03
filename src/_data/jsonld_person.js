@@ -1,9 +1,8 @@
-const yaml = require("js-yaml");
 const { readFileSync } = require("fs");
 
 module.exports = function () {
-  const cvYaml = readFileSync("./content/cv.yml", "utf-8");
-  const cv = yaml.load(cvYaml);
+  const cvJson = readFileSync("./content/cv.json", "utf-8");
+  const cv = JSON.parse(cvJson);
 
   if (!cv || !cv.basics) {
     return null;
@@ -19,7 +18,6 @@ module.exports = function () {
     url: basics.url,
     email: basics.email,
     description: basics.summary,
-    jobTitle: basics.label,
     sameAs: [],
   };
 
@@ -42,8 +40,17 @@ module.exports = function () {
   }
 
   // Add skills
-  if (Array.isArray(cv.skills) && cv.skills.length > 0) {
-    schema.knowsAbout = cv.skills;
+  if (cv.skills) {
+    const allSkills = [];
+    if (Array.isArray(cv.skills.leadership)) {
+      allSkills.push(...cv.skills.leadership);
+    }
+    if (Array.isArray(cv.skills.tech)) {
+      allSkills.push(...cv.skills.tech);
+    }
+    if (allSkills.length > 0) {
+      schema.knowsAbout = allSkills;
+    }
   }
 
   // Add education
