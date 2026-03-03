@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="generator" content="{{ eleventy.generator }}"/>
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}"/>
     <title>{{ page_title }}</title>
@@ -39,6 +38,13 @@
     {% endif %}
     {% if seo_og_image %}
       <meta name="twitter:image" content="{{ seo_og_image }}"/>
+    {% endif %}
+
+    {# Structured Data (JSON-LD) #}
+    {% if jsonld_person %}
+      <script type="application/ld+json">
+        {{ jsonld_person | dump | safe }}
+      </script>
     {% endif %}
 
     <link rel="me" href="https://mastodon.uno/@carlop"/>

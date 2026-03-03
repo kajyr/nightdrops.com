@@ -22,9 +22,12 @@ module.exports = async function () {
   const logbook = importer(xml);
 
   if (logbook) {
-    const divesWithLoc = logbook.dives.filter(
-      d => !isNaN(d.location.lat) && !isNaN(d.location.lng)
-    );
+    const divesWithLoc = logbook.dives.filter(d => {
+      const lat = Number(d.location.lat);
+      const lng = Number(d.location.lng);
+      // Filter out invalid coordinates: NaN or (0, 0) aka "Null Island"
+      return !isNaN(lat) && !isNaN(lng) && (lat !== 0 || lng !== 0);
+    });
     return uniqueLocation(divesWithLoc);
   }
   return [];
