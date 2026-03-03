@@ -1,27 +1,31 @@
 {% extends "layouts/base.html" %}
 
 {% block header %}
+<link rel="preconnect" href="https://unpkg.com" crossorigin="anonymous"/>
+<link rel="dns-prefetch" href="https://unpkg.com"/>
+<link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin="anonymous"/>
+<link rel="dns-prefetch" href="https://tile.openstreetmap.org"/>
 <link
   rel="stylesheet"
   href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""
+  crossorigin="anonymous"
 />
-<script>
+{% endblock %}
 
+{% block footer_scripts %}
+<script>
 const locations = [
   {% for loc in dives_locations -%}
   {{ loc | dump | safe }},
   {%- endfor -%}
-]
+];
 </script>
-{% endblock %}
-
-{% block footer_scripts %}
 <script
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""
+  crossorigin="anonymous"
+  defer
 ></script>
 <script src="{{ '/js/map.js' | url }}" defer></script>
 {% endblock %}
