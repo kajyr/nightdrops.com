@@ -17,9 +17,15 @@
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
-    // Markers
+    // Markers with accessible labels
     for (const loc of locations) {
-      L.marker([loc.lat, loc.lng]).addTo(map);
+      const markerLabel = `${loc.site}, ${loc.place}, ${loc.country}`;
+      const marker = L.marker([loc.lat, loc.lng], {
+        title: markerLabel,
+        alt: markerLabel,
+      }).addTo(map);
+      // Bind tooltip for hover/focus
+      marker.bindTooltip(markerLabel, { permanent: false });
     }
   }
 
