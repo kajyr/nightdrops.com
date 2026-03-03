@@ -1,0 +1,155 @@
+{
+  "basics": {
+    "name": "Carlo Panzi",
+    "image": "",
+    "email": "carlo.panzi@gmail.com",
+    "github": "kajyr",
+    "linkedIn": "carlopanzi",
+    "phone": "+39 3280208091",
+    "url": "https://nightdrops.com",
+    "summary": "Engineering leader with 20 years of experience scaling high-performing teams and delivering flagship products. Currently leading 15+ engineers across cross-functional teams at Digital Science, driving product innovation and architectural transformation. Proven track record in building teams from scratch, implementing agile methodologies, and aligning technical strategy with business objectives. Expert in web technologies (JavaScript, React, Node.js) with deep experience in e-commerce and SaaS product development.",
+    "profiles": [
+      {
+        "network": "github",
+        "username": "kajyr",
+        "url": "https://github.com/kajyr"
+      },
+      {
+        "network": "linkedIn",
+        "username": "carlopanzi",
+        "url": "https://www.linkedin.com/in/carlopanzi"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Digital Science",
+      "position": "Head of Engineering - Dimensions Webapp",
+      "startDate": "November 2024",
+      "endDate": "Present",
+      "summary": [
+        "I am leading the development of Dimensions, one of the Digital Science’s flagship web applications, overseeing several cross-functional teams covering feature development, platform engineering, QA, DevOps, and configuration management."
+      ],
+      "highlights": [
+        "Empowered senior developers to take on leadership roles, mentoring and coaching junior developers, and leading technical initiatives.",
+        "Led the growth of the team, enabling engineers to reach their objectives and reach higher targets through effective mentorship and coaching.",
+        "Shifted the team skillset from frontend / backend to a fullstack approach, to improve efficiency and independence in delivery.",
+        "Improved the QA process and established a Release Management & QA function to ensure high quality releases with minimal bugs.",
+        "Collaborated with Product, Sales, and Executive leadership to define technology roadmap aligned with 3-year strategic plan.",
+        "Built engineering squad of 3 engineers, PM and UX designer for Digital Science investment case, shipping MVP in 3 months under budget"
+      ]
+    },
+    {
+      "name": "Digital Science",
+      "position": "Engineering Manager",
+      "startDate": "April 2023",
+      "endDate": "November 2024",
+      "summary": [
+        "Led frontend engineering for Dimensions, Digital Science's flagship research intelligence platform serving million users with SaaS and on-premises solutions."
+      ],
+      "highlights": [
+        "Collaborated with Product Management and Design teams to define and execute the product roadmap, ensuring alignment with business goals and user needs",
+        "Implemented agile methodologies and best practices, improving development processes, code quality, and delivery timelines",
+        "Led the successful migration of the Dimensions frontend to a modern React-based architecture, enhancing performance, scalability, and maintainability",
+        "Established key performance metrics and reporting mechanisms to track team progress and product success"
+      ]
+    },
+    {
+      "name": "Digital Science",
+      "position": "Senior Software Engineer",
+      "startDate": "December 2016",
+      "endDate": "April 2023",
+      "summary": [
+        "I worked as a Senior Software Engineer in the Digital Science webapp team, where I was responsible for the development of the frontend of the main product of the company, Dimensions."
+      ],
+      "highlights": [
+        "Contributed to the growth of Dimensions from a startup MVP to a mature SaaS product with thousands of users worldwide",
+        "Established Dimensions design system and component library, enhancing UI consistency and reducing development time by 30% on new features"
+      ]
+    },
+    {
+      "name": "YOOX Net-A-Porter Group",
+      "position": "Tech lead for in-Season multibrand",
+      "startDate": "2011",
+      "endDate": "December 2016",
+      "summary": [
+        "I have lead a development team in charge of the frontend in-Season multibrand e-commerce platform. By coordinating the activities with other tech areas and acting as a liaison with all the other departments in the company, I helped the commercial team deliver the best experience to users.",
+        "Through the frontend communities I advocated the use of web standards and agile techniques to improve collaboration and keep high standards in the tech departments."
+      ],
+      "highlights": []
+    },
+    {
+      "name": "YOOX Net-A-Porter Group",
+      "position": "Senior Frontend Developer",
+      "startDate": "2010",
+      "endDate": "2011",
+      "summary": [
+        "As a frontend developer for the Mono brand Product Team, I've championed a team of web designers and developers in the release and maintenance of several Online Stores; we worked using the asp classic, .NET, XSLT server-side and javascript, css, flash and flex on the client side."
+      ],
+      "highlights": [
+        "Transitioned from a ActionScript 3 based ecosystem to a fully JavaScript-based architecture for the Online Store platform.",
+        "Published and maintained the Online Stores for the following brands: Diesel, Moschino, Maison Martin Margiela, Napapijri, Valentino, and other major brands in the YOOX portfolio."
+      ]
+    },
+    {
+      "name": "Early Career - Web agencies",
+      "position": "Web / Game Developer",
+      "startDate": "2006",
+      "endDate": "2009",
+      "summary": [],
+      "highlights": [
+        "Released a number of web and desktop applications using Adobe Flash, AIR, PHP, JavaScript and CSS, using WordPress and Joomla as backend.",
+        "Developed and managed projects, internal tools and learning games for clients such as Costa Crociere, Unicredit Group, Banca Etruria, Magneti Marelli, Intesa San Paolo, Sanofi - Aventis",
+        "Focus on educational games and interactive applications to improve learning and user engagement for various clients."
+      ]
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "FIPSAS - CMAS",
+      "position": "Scuba Diver Instructor trainer (M2)",
+      "startDate": "October 2023",
+      "summary": [
+        "30 years of experience as a scuba diver, with more than 1000 dives in different locations around the world; certified as a Scuba Diving Instructor Trainer (M2), training instructors and divers of all levels, to handle stress and emergency situations and remain clear minded and focused in challenging environments"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Università degli Studi di Milano-Bicocca",
+      "area": "BSc Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2005",
+      "endDate": "2009"
+    }
+  ],
+  "skills": {
+    "leadership": [
+      "Engineering Leadership & Strategic Planning",
+      "Cross-Functional Team Leadership (Product, QA, DevOps, Design)",
+      "Team Scaling & Organizational Development",
+      "Hiring, Talent Development, Mentorship",
+      "Performance Management & Coaching",
+      "Agile/Scrum Methodologies & Process Optimization",
+      "Engineering Metrics & Data-Driven Decision Making"
+    ],
+    "tech": [
+      "Languages & Frameworks: JavaScript/TypeScript, React, React Native, Node.js",
+      "Frontend Architecture & Design Systems",
+      "Web Technologies: HTML5, CSS, Sass, Tailwind, Responsive Design",
+      "DevOps & Tools: CI/CD, Test-Driven Development, Git",
+      "Cloud & Infrastructure: AWS, Docker, Kubernetes",
+      "API Design & Integration"
+    ]
+  },
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Highly proficient"
+    },
+    {
+      "language": "Italian",
+      "fluency": "Native speaker"
+    }
+  ]
+}
