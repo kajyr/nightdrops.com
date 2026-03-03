@@ -1,6 +1,9 @@
 ---
 page_title: "Scuba diving | nightdrops.com"
 layout: "layouts/map.njk"
+seo_description: "Carlo Panzi's scuba diving log — dive sites across Italy and beyond, with highlights from his FIPSAS instructor trainer certification."
+seo_url: "https://nightdrops.com/scuba/"
+seo_og_image: "https://nightdrops.com/images/icon-512.png"
 ---
 
 # Scuba diving

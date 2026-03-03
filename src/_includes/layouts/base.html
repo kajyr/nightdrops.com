@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}"/>
     <title>{{ page_title }}</title>
     {% if seo_description %}
-      <meta name="description" content="{{seo_description}}"/>
+      <meta name="description" content="{{ seo_description }}"/>
     {% endif %}
+
+    {# Open Graph #}
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="nightdrops.com"/>
+    <meta property="og:title" content="{{ page_title }}"/>
+    {% if seo_description %}
+      <meta property="og:description" content="{{ seo_description }}"/>
+    {% endif %}
+    {% if seo_url %}
+      <meta property="og:url" content="{{ seo_url }}"/>
+    {% endif %}
+    {% if seo_og_image %}
+      <meta property="og:image" content="{{ seo_og_image }}"/>
+    {% endif %}
+
+    {# Twitter Card #}
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@kajyr"/>
+    <meta name="twitter:title" content="{{ page_title }}"/>
+    {% if seo_description %}
+      <meta name="twitter:description" content="{{ seo_description }}"/>
+    {% endif %}
+    {% if seo_og_image %}
+      <meta name="twitter:image" content="{{ seo_og_image }}"/>
+    {% endif %}
+
     <link rel="me" href="https://mastodon.uno/@carlop"/>
     <link
       rel="icon"
