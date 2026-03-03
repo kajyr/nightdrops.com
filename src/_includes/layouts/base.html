@@ -45,7 +45,8 @@
     {% block header %}{% endblock %}
   </head>
   <body>
-    <main class="w-4/5 max-w-5xl mx-auto text-slate-700">
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <main id="main-content" class="w-4/5 max-w-5xl mx-auto text-slate-700">
       {% block content %}
         {{ content | safe }}
       {% endblock %}

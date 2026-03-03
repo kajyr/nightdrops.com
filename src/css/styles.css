@@ -1,6 +1,31 @@
 /* src/assets/css/tailwind.css*/
 @import "tailwindcss";
 
+/* Skip-to-main link — hidden until focused (WCAG 2.4.1) */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+
+  &:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: rgb(2 6 23);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+}
+
 body {
   margin-top: 2rem;
   margin-bottom: 2rem;
