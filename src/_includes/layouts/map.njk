@@ -14,19 +14,17 @@
 {% endblock %}
 
 {% block footer_scripts %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
 <script>
-const locations = [
-  {% for loc in dives_locations -%}
-  {{ loc | dump | safe }},
-  {%- endfor -%}
-];
+// Fetch dives data asynchronously and populate global
+let locations = [];
+fetch("/api/dives.json")
+  .then(res => res.json())
+  .then(data => {
+    locations = data;
+  })
+  .catch(err => console.error("Failed to load dives data:", err));
 </script>
-<script
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin="anonymous"
-  defer
-></script>
 <script src="{{ '/js/map.js' | url }}" defer></script>
 {% endblock %}
 

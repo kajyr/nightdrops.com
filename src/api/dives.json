@@ -1,0 +1,5 @@
+---
+permalink: /api/dives.json
+eleventyExcludeFromCollections: true
+---
+{{ dives_locations | dump | safe }}
